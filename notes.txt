@@ -1,0 +1,3 @@
+  - name : print logs
+      if: always()
+      run : docker compose logs

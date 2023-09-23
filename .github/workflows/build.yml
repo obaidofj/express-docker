@@ -41,6 +41,4 @@ jobs:
       run : docker compose -f docker-compose-prod.yml
       env:
         DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-    - name : print logs
-      if: always()
-      run : docker compose logs
+  
