@@ -36,9 +36,9 @@ jobs:
       with:
         host: 15.237.159.121
         user: github
-        ssh-private-key: ${{secrets.DEPLOYMENT_KEY}}
+        ssh-private-key: ${{ secrets.DEPLOYMENT_KEY }}
     - name: deploy docker image
       run : docker compose -f docker-compose-prod.yml up -d
       env:
-        DB_PASSWORD: ${{secrets.DB_PASSWORD}}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
   
